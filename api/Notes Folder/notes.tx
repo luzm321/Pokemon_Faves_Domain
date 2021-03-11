@@ -29,3 +29,10 @@ browserify.js allows you to do modularity and need to put source js file and com
 
 ___________________________________________________________________________________________________________________________________________-
 
+cd means command when typed on terminal. To get into the folder: type cd src, then cd lib for example and to get out type cd.. in terminal
+when adding and and commiting and pushing after saving changes, make sure you save and do it at the Json-ServerAndGruntBoilerPlate folder. To get out
+of 2 folders at a time, you type cd../.. in terminal
+
+To close the server so that it doesn't eat up memory, you type in the terminal ctrl + C and then say Y for yes.
+
+

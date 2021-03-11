@@ -20,6 +20,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^21.0.0",
     "grunt-http-server": "^2.1.0",
+    "json-server": "^0.16.3",
     "load-grunt-config": "^3.0.1",
     "nss-domcomponent": "^0.1.2"
   },
