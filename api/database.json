@@ -3,5 +3,10 @@
     "charmander": {
       "name": "charmander"
     }
-  }
+  },
+    "anime": {
+      "shonen": {
+        "name": "HunterxHunter"
+      }
+    }
 }

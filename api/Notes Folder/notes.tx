@@ -1,0 +1,29 @@
+readme file: can write instructions about app and will display in github
+
+gitignore: allows you ignore certain files/folders you don't wanna push to github:
+for example: need to just put the names of the files/folders and go down in order of folders to ignore (see gitignore file for reference)
+
+eslint is a tool that has rules and will either warn you or throw an error if not abiding by rules and for example double quotes and semi colon missing.
+
+api: is a container that holds data that you can fetch through an api call using javascript
+
+database.json (json file) only accepts objects.
+
+Public Folder: has main.html and for organization .css and .js etc.
+
+bundle.js (created when you run server for the first time): has all code complied, DON'T TOUCH!
+
+src is for organization: for scripts folder (has js files for pages)
+
+library folder has 2 folders and 3 files (grunt and package.json once npm installed):
+grunt config (grunt needs gruntfile.js to run)
+
+package.json has everything that you install npm packages (node package managers: make life easier and allows you to use others' functions or methods)
+to make coding easier. package.json tells what packages to install to allow server to run.
+
+Node modules has a lot of things in it don't modify and is needed.k
+
+grunt needs aliases.yaml, bgShell.js (launches command of json server and gives port you want, default is 8088)
+
+browserify.js allows you to do modularity and need to put source js file and compilation
+
