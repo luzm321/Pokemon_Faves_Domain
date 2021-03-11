@@ -27,3 +27,5 @@ grunt needs aliases.yaml, bgShell.js (launches command of json server and gives 
 
 browserify.js allows you to do modularity and need to put source js file and compilation
 
+___________________________________________________________________________________________________________________________________________-
+

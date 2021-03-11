@@ -1,12 +1,125 @@
 {
-  "pokemon": {
-    "charmander": {
-      "name": "charmander"
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Snorlax",
+      "type": 2
+    },
+    {
+      "id": 2,
+      "name": "Pancham",
+      "type": 1
+    },
+    {
+      "id": 3,
+      "name": "Piplup",
+      "type": 3
+    },
+    {
+      "id": 4,
+      "name": "Rayquaza",
+      "type": 4
+    },
+    {
+      "id": 5,
+      "name": "Mimikyu",
+      "type": 5
+    },
+    {
+      "id": 6,
+      "name": "Gardevoir",
+      "type": 6
+    },
+    {
+      "id": 2,
+      "name": "Spinda",
+      "type": 1
+    },
+    {
+      "id": 8,
+      "name": "Jirachi",
+      "type": 7
+    },
+    {
+      "id": 9,
+      "name": "Garchomp",
+      "type": 8
+    },
+    {
+      "id": 9,
+      "name": "Leafleon",
+      "type": 9
+    },
+    {
+      "id": 10,
+      "name": "Jigglypuff",
+      "type": 5
     }
-  },
-    "anime": {
-      "shonen": {
-        "name": "HunterxHunter"
-      }
+  ],
+
+  "types": [
+    {
+      "id": 1,
+      "name": "Fighting"
+    },
+    {
+      "id": 2,
+      "name": "Normal"
+    },
+    {
+      "id": 3,
+      "name": "Water"
+    },
+    {
+      "id": 4,
+      "name": "Dragon"
+    },
+    {
+      "id": 5,
+      "name": "Fairy"
+    },
+    {
+      "id": 6,
+      "name": "Psychic"
+    },
+    {
+      "id": 7,
+      "name": "Steel"
+    },
+    {
+      "id": 8,
+      "name": "Ground"
+    },
+    {
+      "id": 9,
+      "name": "Grass"
     }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Luz Angelique",
+      "lastName": "Madrazo",
+      "username": "Rayne_21",
+      "email": "luzm321@yahoo.com",
+      "password": "Green"
+    },
+    {
+      "id": 2,
+      "firstName": "Gabriel",
+      "lastName": "Miranda",
+      "username": "Kazathur",
+      "email": "gabmin21@hotmail.com",
+      "password": "Blue"
+    },
+    {
+      "id": 3,
+      "firstName": "Luke Dominic",
+      "lastName": "Madrazo",
+      "username": "ironaddicts14",
+      "email": "ironaddicts14@gamil.com",
+      "password": "Red"
+    }
+  ]
 }
