@@ -35,4 +35,25 @@ of 2 folders at a time, you type cd../.. in terminal
 
 To close the server so that it doesn't eat up memory, you type in the terminal ctrl + C and then say Y for yes.
 
+___________________________________________________________________________________________________________________________________________
+Grunt and browserify(allows project to become modular meaning you're not required to import or link each file to your html (example no needto
+link css stylesheet or js script to html)
+Modules are file sections of your application that contains bundle of your js files into 1 destination instead of having many js files
+referenced in your html.
+
+Make modules to manage files such as an apiManager module. For grunt and json servers, you use export default such as export default class apiManager
+In order to import something from a js file into another js file, you need to import then export.
+Exporting and importing.
+Fetch function returns a promise so no need to put new Promise. Just use .then
+
+First: make an apiManager.js file module and make it in modularity with the main.js by making a class with constructor in the apiManager.js
+and export default class with 2 functions in it. Then link to main.js to import it there.
+You export in apiManager.js and you import in main.js
+
+When exporting a function, you just use export, but when exporting a class, you use export default.
+When importing a function you have to put curly braces, and within you put the name of the function, 
+if its a class you just say import nameOfClass from './pathOfFile'
+
+
+
 
