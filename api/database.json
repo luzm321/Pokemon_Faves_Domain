@@ -54,9 +54,13 @@
       "id": 11,
       "name": "Jigglypuff",
       "type": 5
+    },
+    {
+      "name": "Teddiursa",
+      "type": "1",
+      "id": 12
     }
   ],
-
   "types": [
     {
       "id": 1,
@@ -95,7 +99,6 @@
       "name": "Grass"
     }
   ],
-
   "users": [
     {
       "id": 1,

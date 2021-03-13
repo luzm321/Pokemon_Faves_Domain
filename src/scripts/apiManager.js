@@ -4,7 +4,7 @@ export default class ApiManager {
 
     getPokemon() {
         try {
-            return fetch("http:localhost:8088/pokemon").then(response => response.json());
+            return fetch("http://localhost:8088/pokemon").then(response => response.json());
         } catch (e) {
             console.error(e);
         };
@@ -12,7 +12,7 @@ export default class ApiManager {
 
     getUsers() {
         try {
-            return fetch("http:localhost:8088/users").then(response => response.json());
+            return fetch("http://localhost:8088/users").then(response => response.json());
         } catch (e) {
             console.error(e);
         };
@@ -20,7 +20,37 @@ export default class ApiManager {
 
     getTypes() {
         try {
-            return fetch("http:localhost:8088/types").then(response => response.json());
+            return fetch("http://localhost:8088/types").then(response => response.json());
+        } catch (e) {
+            console.error(e);
+        };
+    };
+
+    // Below is an example of a fetch post api call:
+
+    addPokemon(newPokemon) {
+        try{
+            return fetch("http://localhost:8088/pokemon", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newPokemon)
+            }).then(response => response.json());
+
+        } catch (e) {
+            console.error(e);
+        };
+    };
+
+    deletePokemon(pokemonId) {
+        try {
+            return fetch(`http://localhost:8088/pokemon/${pokemonId}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            }).then(response => response.json());
         } catch (e) {
             console.error(e);
         };

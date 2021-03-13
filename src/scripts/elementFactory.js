@@ -1,48 +1,36 @@
 export default class ElementFactory {
-    constructor(elementTag, attribute, attributeValue, attribute2, attributeValue2, innerText, parentElement) {
-        this.elementTagName = elementTag;
-        this.attributeName = attribute;
-        this.attributeValueName= attributeValue;
-        this.attribute2Name = attribute2;
-        this.attributeValue2Name = attributeValue2;
-        this.innerTextName = innerText;
-        this.elementParent = parentElement;
+    constructor() {
     };
 
-    createIt(param1) {
-        this.elementTagName = param1
-        let newElement = document.createElement(this.elementTagName);
-        this.newElement = newElement;
+    createIt(elementTag) {
+        this.newElement = document.createElement(elementTag);
     };
 
     addFirstAttribute(attributeName, attributeValue) {
-        this.attributeName = attributeName;
-        this.attributeValueName = attributeValue;
-        this.newElement.setAttribute(this.attributeName, this.attributeValueName);
+        this.newElement.setAttribute(attributeName, attributeValue);
     };
 
-    addSecondAttribute(attribute2Name, attributeValue2) {
-        this.attribute2Name = attribute2Name;
-        this.attributeValue2Name = attributeValue2;
-        this.newElement.setAttribute(this.attribute2Name, this.attributeValue2Name);
+    addSecondAttribute(attributeName2, attributeValue2) {
+        this.newElement.setAttribute(attributeName2, attributeValue2);
     };
 
-    addInnerText(innerText) {
-        this.innerTextName = innerText;
-        this.newElement.innerText = this.innerTextName;
+    addText(elementInnerText) {
+        this.newElement.innerText = `${elementInnerText}`;
     };
 
-    appendToParentElement(parentElement) {
-        this.elementParent = parentElement;
-        this.elementParent.appendChild(this.newElement);
+    appendToParent(parentElement) {
+        parentElement.appendChild(this.newElement);
     };
 
-    constructNewElement (elementTag, attribute, attributeValue, attribute2, attributeValue2, innerText, parentElement) {
-        this.createIt(elementTag);
-        this.addFirstAttribute(attribute, attributeValue);
-        this.addSecondAttribute(attribute2, attributeValue2);
-        this.addInnerText(innerText);
-        this.appendToParentElement(parentElement);
+    createNewElement(elementTag, attributeName, attributeValue, attributeName2, attributeValue2, elementInnerText, parentElement) {
+        try {
+            this.createIt(elementTag);
+            this.addFirstAttribute(attributeName, attributeValue);
+            this.addSecondAttribute(attributeName2, attributeValue2);
+            this.addText(elementInnerText);
+            this.appendToParent(parentElement);
+        } catch (e) {
+            console.error (e);
+        };
     };
-
 };

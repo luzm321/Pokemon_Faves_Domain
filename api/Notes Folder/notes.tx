@@ -54,6 +54,18 @@ When exporting a function, you just use export, but when exporting a class, you 
 When importing a function you have to put curly braces, and within you put the name of the function, 
 if its a class you just say import nameOfClass from './pathOfFile'
 
+___________________________________________________________________________________________________________________________________________
 
+Regular fetch calls (return fetch) only gets data. The api calls you do in the apiManager.js needs to also coincide with the main.js to specify
+which information you want as an object;
+
+For a post call, it allows you to add  data to the database.json and include in dom to be seen. Post calls need a method to specify what type
+of call you're doing and needs a headers (Content-Type: application/json) and body (JSON.stringify(data) parameter). post needs a parameter in the
+function that is in the body parameter for stringify. When doing a post api call and in the main.js you create a variable and put your object info
+the id automatically gets created.
+
+Delete calls
+
+Edit Calls (Put and Patch)
 
 
