@@ -10,6 +10,8 @@ let typesDataPromiseArray = new Array();
 let parentElement = document.getElementById("pokemonBiases");
 let addPokemonButton = document.getElementById("addPokemon");
 let deletePokemonButton = document.getElementById("deletePokemon");
+let editPokemonButton = document.getElementById("editPokemon");
+let patchPokemonButton = document.getElementById("patchPokemon");
 let inputPokemonName = document.getElementById("name");
 let inputPokemonType = document.getElementById("type");
 let inputPokemonId = document.getElementById("pokemonIdInput");
@@ -29,10 +31,12 @@ let addEventListeners = () => {
     addPokemonButton.addEventListener("click", clickOnAddPokemon);
     inputPokemonId.addEventListener("change", updateValue);
     deletePokemonButton.addEventListener("click", clickOnDeletePokemon);
+    editPokemonButton.addEventListener("click", clickOnEditPokemon);
+    patchPokemonButton.addEventListener("click", clickOnPatchPokemon);
 };
 
 let updateValue = (event) => {
-    if (event.target.id === "pokemonIdInput") {
+    if(event.target.id === "pokemonIdInput") {
         pokemonId = event.target.value;
     } else {
         newPokemon[event.target.id] = event.target.value;
@@ -48,6 +52,18 @@ let clickOnAddPokemon = () => {
 
 let clickOnDeletePokemon = () => {
     apiManager.deletePokemon(pokemonId).then(() => {
+        location.reload();
+    });
+};
+
+let clickOnEditPokemon = () => {
+    apiManager.editPokemon(pokemonId, newPokemon).then(() => {
+        location.reload();
+    });
+};
+
+let clickOnPatchPokemon = () => {
+    apiManager.patchPokemon(pokemonId, newPokemon).then(() => {
         location.reload();
     });
 };

@@ -55,6 +55,34 @@ export default class ApiManager {
             console.error(e);
         };
     };
+
+
+    editPokemon(pokemonId, data) {
+        try{
+            return fetch(`http://localhost:8088/pokemon/${pokemonId}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json());
+        } catch (e) {
+            console.error(e);
+        };
+    };
+
+    patchPokemon(pokemonId, data) {
+        try{
+            return fetch(`http://localhost:8088/pokemon/${pokemonId}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json());
+        } catch (e) {
+            console.error(e);
+        };
+    };
+
 };
-
-
