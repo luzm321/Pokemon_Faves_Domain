@@ -26,8 +26,6 @@ export default class ApiManager {
         };
     };
 
-    // Below is an example of a fetch post api call:
-
     addPokemon(newPokemon) {
         try{
             return fetch("http://localhost:8088/pokemon", {
