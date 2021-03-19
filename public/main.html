@@ -1,39 +1,39 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+        <title>The HTML5 Herald</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
 
-    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+        <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 
-</head>
+    </head>
 
-<body id="appBody">
-    <div id=loginPage>
-        <h1>Log In</h1>
-        <input id="username" placeholder="username"></input>
-        <input id="password" placeholder="password"></input>
-        <button id="loginButton">Log In</button>
-    </div>
-    <div id="homePage" hidden>
-        <h1 id="pokemonBiases" class="pokes">Favorite Pokemon</h1>
-
-        <div id="addPokemonFieldsDiv">
-            <input id="name" placeholder="Pokemon Name"></input>
-            <input id="type" placeholder="Pokemon Type"></input>
-            <button id="addPokemon" class="appendPokemon">Add Pokemon</button>
-            <button id="editPokemon" class="editPokemon">Edit Pokemon</button>
-            <button id="patchPokemon" class="patchPokemon">Patch Pokemon</button>
+    <body id="appBody">
+        <div id=loginPage>
+            <h1>Log In</h1>
+            <input id="username" placeholder="username"></input>
+            <input id="password" placeholder="password"></input>
+            <button id="loginButton">Log In</button>
         </div>
-        <div id="deletePokemonFieldsDiv">
-            <input id="pokemonIdInput" placeholder="Pokemon Id"></input>
-            <button id="deletePokemon" class="removePokemon">Delete Pokemon</button>
+        <div id="homePage" hidden>
+            <button id="logoutButton">Log Out</button>
+            <h1 id="pokemonBiases" class="pokes">Favorite Pokemon</h1>
+            <div id="addPokemonFieldsDiv">
+                <input id="name" placeholder="Pokemon Name"></input>
+                <input id="type" placeholder="Pokemon Type"></input>
+                <button id="addPokemon" class="appendPokemon">Add Pokemon</button>
+                <button id="editPokemon" class="editPokemon">Edit Pokemon</button>
+                <button id="patchPokemon" class="patchPokemon">Patch Pokemon</button>
+            </div>
+            <div id="deletePokemonFieldsDiv">
+                <input id="pokemonIdInput" placeholder="Pokemon Id"></input>
+                <button id="deletePokemon" class="removePokemon">Delete Pokemon</button>
+            </div>
         </div>
-    </div>
+    </body>
     <script src="./bundle.js"></script>
-</body>
 </html>

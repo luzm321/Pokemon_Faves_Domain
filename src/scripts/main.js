@@ -14,11 +14,13 @@ let addPokemonButton = document.getElementById("addPokemon");
 let deletePokemonButton = document.getElementById("deletePokemon");
 let editPokemonButton = document.getElementById("editPokemon");
 let patchPokemonButton = document.getElementById("patchPokemon");
+let logoutButton = document.getElementById("logoutButton");
 let inputPokemonName = document.getElementById("name");
 let inputPokemonType = document.getElementById("type");
 let inputPokemonId = document.getElementById("pokemonIdInput");
 let newPokemon = {};
 let pokemonId;
+
 // login page:
 let usernameInput = document.getElementById("username");
 let passwordInput = document.getElementById("password");
@@ -32,7 +34,7 @@ let getDataFromApis = () => {
     typesDataPromiseArray.push(apiManager.getTypes());
 };
 
-let gettingDatafromApis = new Promise ((resolve, reject) => {
+let gettingDatafromApis = new Promise((resolve) => {
     resolve(getDataFromApis());
 });
 
@@ -49,6 +51,7 @@ let addEventListeners = () => {
     loginButton.addEventListener("click", () => {
         loginManager.authenticate(usersDataPromiseArray, username, password);
     });
+    logoutButton.addEventListener("click", loginManager.clickOnLogOut);
 };
 
 let updateValue = (event) => {
@@ -57,8 +60,8 @@ let updateValue = (event) => {
     } else if (event.target.id === "name" || event.target.id === "type") {
         newPokemon[event.target.id] = event.target.value;
         console.log("pokemon object", newPokemon);
-    } else if (event.target.id === 'username') {
-        username = event.target.id;
+    } else if (event.target.id === "username") {
+        username = event.target.value;
         console.log("username", username);
     } else {
         password = event.target.value;
@@ -90,11 +93,11 @@ let clickOnPatchPokemon = () => {
     });
 };
 
-let initialize = new Promise((resolve, reject) => {
+let initialize = new Promise((resolve) => {
     gettingDatafromApis.then(() => {
         loginManager.checkIfAuthenticated(usersDataPromiseArray);
-        addEventListeners();
-    });  
+        resolve(addEventListeners());
+    }); 
 });
 
 initialize.then(() => {

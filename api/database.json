@@ -59,6 +59,11 @@
       "name": "Teddiursa",
       "type": "1",
       "id": 12
+    },
+    {
+      "name": "mewtwo",
+      "type": "2",
+      "id": 13
     }
   ],
   "types": [

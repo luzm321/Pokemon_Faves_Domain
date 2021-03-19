@@ -36,4 +36,11 @@ export default class LoginManager {
         loginPage.setAttribute("hidden", "");
         homePage.removeAttribute("hidden");
     };
+
+    clickOnLogOut() {
+        loginPage.removeAttribute("hidden");
+        homePage.setAttribute("hidden", "");
+        sessionStorage.removeItem("username");
+        sessionStorage.removeItem("password");
+    };
 };
