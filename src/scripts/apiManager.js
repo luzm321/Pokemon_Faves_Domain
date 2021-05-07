@@ -4,7 +4,7 @@ export default class ApiManager {
 
     getPokemon() {
         try {
-            return fetch("http://localhost:8088/pokemon").then(response => response.json());
+            return fetch("http://localhost:8088/pokemon").then(response => {return response.json()});
         } catch (e) {
             console.error(e);
         };
@@ -26,7 +26,7 @@ export default class ApiManager {
         };
     };
 
-    addPokemon(newPokemon) {
+    addPokemon(newPokemon) { // parameter empty object pokemon to be passed on to the body
         try{
             return fetch("http://localhost:8088/pokemon", {
                 method: "POST",
@@ -41,7 +41,7 @@ export default class ApiManager {
         };
     };
 
-    deletePokemon(pokemonId) {
+    deletePokemon(pokemonId) { // need a target id, pass on template literal, don't need a body for delete call
         try {
             return fetch(`http://localhost:8088/pokemon/${pokemonId}`, {
                 method: "DELETE",
@@ -54,8 +54,8 @@ export default class ApiManager {
         };
     };
 
-
-    editPokemon(pokemonId, data) {
+//data or bodyToReceive
+    editPokemon(pokemonId, data) { //edit/put(revises everything) and patch(revises certain parts of object) need 2 parameters, the target id and new data to be passed on
         try{
             return fetch(`http://localhost:8088/pokemon/${pokemonId}`, {
                 method: "PUT",
